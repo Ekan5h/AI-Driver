@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <style>
+        canvas{
+            border: solid white;
+            border-radius: 10px;
+        }
+        body{
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+    </style>
+  </head>
+  <body bgcolor="black">
+    <font color = "yellow" face="sans serif">
+    <center>
+      <h1 id = "title">Draw a track</h1>
+      <font color = "white" face="sans serif">
+      Refresh to Reset <br>
+      Each Generation lasts 30 seconds.
+      <div id = "can"></div>
+      <script src="car.js"></script>
+      <p align="justify">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each generation consists of none cars out of which the top 3 cars are selected to breed for the next generation.
+          Each car has three LiDAR sensors separated at 45<sup>o</sup> angles and two possible speeds. The thresholds for each sensor and the values of the speeds are learned through Genetic Algorithm. 
+          The score for each car is the distance it travelled minus the number of turns it took. This maximises the lifetime of the car while minimising the number of turns which results in a smoother motion.
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initially, the cars learn the thresholds for the sensors while in the later stages when almost every car is able to complete the loop, maximum possible speeds are achieved. 
+      </p>
+    </center>
+  </body>
+</html>
