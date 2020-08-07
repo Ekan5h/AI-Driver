@@ -24,8 +24,8 @@ class car {
     fill(color(255, 0, 0));
     rect(-5, -7, 10, 9);
     fill(color(255, 255, 0));
-    circle(3, 8, 3, 3);
-    circle(-3, 8, 3, 3);
+    circle(3, 8, 3);
+    circle(-3, 8, 3);
     fill(color(0, 200, 255));
     rect(-5, 1, 10, 2)
     pop();
@@ -201,6 +201,7 @@ episode = 0;
 
 function setup() {
   frameRate(50);
+  pixelDensity(1);
   can = createCanvas(600, 400);
   can.parent("can");
 }
@@ -213,7 +214,7 @@ function draw() {
   noStroke();
   fill(180);
   for (var i = 0; i < track.length; i++) {
-    circle(track[i][0], track[i][1], 40, 40);
+    circle(track[i][0], track[i][1], 40);
   }
   loadPixels();
   for (var i = 0; i < cars.length; i++) {
